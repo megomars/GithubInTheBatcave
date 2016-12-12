@@ -52,3 +52,15 @@
 29. git rebase experiment2 (keep your history cleaner, rewind all your work to top of master branch)
 
 ### Welcome to Github
+
+30. [https://github.com/new](https://github.com/new)
+31. git remote add origin git@github.com:nameofrepo/project.git
+32. git push -u origin master
+
+### Setup your SSH on github
+33. Go to this page and add SSH Key [https://github.com/settings/ssh](https://github.com/settings/ssh)
+34. cd ~/.ssh (open all your existing keys)
+35. ssh-keygen -t rsa -C "myemail@gmail.com"
+36. cat id_rsa.pub
+37. (copy the contents of this and paste it into the https://github.com/settings/ssh section)
+38. ssh -T git@github.com (check that there is a SSH connection)
