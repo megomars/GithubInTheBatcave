@@ -64,3 +64,20 @@
 36. cat id_rsa.pub
 37. (copy the contents of this and paste it into the https://github.com/settings/ssh section)
 38. ssh -T git@github.com (check that there is a SSH connection)
+39. git branch -a (look at all your master branches)
+40. (merge pull request)
+41. git pull (get all the files from github)
+42. git clone https://github.com/jashkenas/coffee-script.git
+43. git fetch (pull changes first and then merge if you want to)
+
+### Github pages
+44. Github pages allows you to host a static page
+
+### Advanced commands
+45. git add -i (interactive add, you can add a part of a file)
+46. git stash (stash changes to the side for now)
+47. git stash list (shows you all the stashed parts of the project)
+48. git stash save "I'm just keeping this on the side for now - like a temporary commit"
+49. git stash apply (pull the stash back in the folder)
+49. git stash drop (delete the stash)
+50. git stash pop (pull the stash back in the folder and delete it)
