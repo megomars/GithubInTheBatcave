@@ -40,3 +40,6 @@
 17. git log --graph (see a graph of the project)
 18. git log --pretty --graph --oneline (custom reports) [http://git-scm.com/docs/git-log](http://git-scm.com/docs/git-log)
 19. gitk (gives you a UI for commits)
+20. git branch (which branch are we currently on?)
+21. git branch experiment (make a branch called experiment)
+22. git checkout experiment (switch to this branch)
