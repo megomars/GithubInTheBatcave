@@ -45,39 +45,68 @@
 23. git branch experiment (make a branch called experiment)
 24. git checkout experiment (switch to this branch)
 25. git checkout -b "bugfix1" (make a new branch and check it out)
-
-26. alias gl='git log --oneline --all --graph --decorate' (here is a cool alias for showing the log)
-27. git merge bugfix1 (merge bugfix1 with the master branch)
-28. git branch -d bugfix1 (delete branch bugfix1 once you've merged it into master)
-29. git rebase experiment2 (keep your history cleaner, rewind all your work to top of master branch)
+26. git branch --all (all local and remote branches)
+27. alias gl='git log --oneline --all --graph --decorate' (here is a cool alias for showing the log)
+28. git merge bugfix1 (merge bugfix1 with the master branch)
+29. git branch -d bugfix1 (delete branch bugfix1 once you've merged it into master)
+30. git rebase experiment2 (keep your history cleaner, rewind all your work to top of master branch)
 
 ### Welcome to Github
 
-30. [https://github.com/new](https://github.com/new)
-31. git remote add origin git@github.com:nameofrepo/project.git
-32. git push -u origin master
+31. [https://github.com/new](https://github.com/new)
+32. git remote add origin git@github.com:nameofrepo/project.git
+33. git push -u origin master
 
 ### Setup your SSH on github
-33. Go to this page and add SSH Key [https://github.com/settings/ssh](https://github.com/settings/ssh)
-34. cd ~/.ssh (open all your existing keys)
-35. ssh-keygen -t rsa -C "myemail@gmail.com"
-36. cat id_rsa.pub
-37. (copy the contents of this and paste it into the https://github.com/settings/ssh section)
-38. ssh -T git@github.com (check that there is a SSH connection)
-39. git branch -a (look at all your master branches)
-40. (merge pull request)
-41. git pull (get all the files from github)
-42. git clone https://github.com/jashkenas/coffee-script.git
-43. git fetch (pull changes first and then merge if you want to)
+34. Go to this page and add SSH Key [https://github.com/settings/ssh](https://github.com/settings/ssh)
+35. cd ~/.ssh (open all your existing keys)
+36. ssh-keygen -t rsa -C "myemail@gmail.com"
+37. cat id_rsa.pub
+38. (copy the contents of this and paste it into the https://github.com/settings/ssh section)
+39. ssh -T git@github.com (check that there is a SSH connection)
+40. git branch -a (look at all your master branches)
+41. (merge pull request)
+42. git pull (get all the files from github - same as performing git fetch and then git merge)
+43. git clone https://github.com/jashkenas/coffee-script.git
+44. git fetch (pull changes first from github and then merge if you want to, you can then git diff master origin/master to compare the changes and then git merge origin/master)
 
 ### Github pages
-44. Github pages allows you to host a static page
+45. Github pages allows you to host a static page
 
 ### Advanced commands
-45. git add -i (interactive add, you can add a part of a file)
-46. git stash (stash changes to the side for now)
-47. git stash list (shows you all the stashed parts of the project)
-48. git stash save "I'm just keeping this on the side for now - like a temporary commit"
-49. git stash apply (pull the stash back in the folder)
-49. git stash drop (delete the stash)
-50. git stash pop (pull the stash back in the folder and delete it)
+46. git add -i (interactive add, you can add a part of a file)
+47. git stash (stash changes to the side for now)
+48. git stash list (shows you all the stashed parts of the project)
+49. git stash save "I'm just keeping this on the side for now - like a temporary commit"
+50. git stash apply (pull the last stash back in the folder)
+41. git stash drop stash@{0} (delete that stash)
+52. git stash pop (pull the stash back in the folder and delete it)
+53. git push origin experiment (push your experiment branch to github)
+54. git diff --name-only master experiment (differences between master and experiment branches)
+55. git push origin --delete experiment (deletes a remote branch)
+
+### Reverting to older versions
+56. git checkout nameoffile.txt (brings back the deleted file)
+57. git reset HEAD nameoffile.txt (unstage a file that was staged)
+58. git reset --hard HEAD (reset to last commit)
+59. **git revert 35454356567e4df656344**
+    - first get the git log and copy the SHA-1 Hash
+
+### Releasing your software
+60. git tag -a RELEASE001 (annotated tag, add a description in the editor)
+61. git show (show contents of your tags)
+62. git show RELEASE001 (show contents of your tags)
+63. git push --tags (pushes tags to github)
+64. git checkout RELEASE001 (go back to that release)
+
+### Github workflow best practices
+65. File an issue with the project
+66. Forking a repo
+67. Create a LICENSE
+68. Recommend changes to original project (new pull request)
+70. Accept pull requests (merge pull request, similar to a code review)
+71. Draft a new release (menu in the tags page. Should use github flavored markdown)
+72. gists (small code snippets) (link, embed or clone gists)
+73. git describe --tags (what releases are available)
+74. [http://try.github.io](http://try.github.io) (interactive tutorial)
+75. [http://help.github.com](http://help.github.com)
