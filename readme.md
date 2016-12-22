@@ -2,7 +2,7 @@
 
 ##Here are 100 things that you need to know about git and github:
 
-### Beginner commands
+  ### Beginner commands
 1. brew install git (install github on a mac with homebrew)
 2. git config --global user.name "M H"
 3. git config --global user.email "myemail@gmail.com"
@@ -17,7 +17,7 @@
   - .DS_Store
   - !master.txt (do track this)
 
-### Some theory about VCS's
+  ### Some theory about VCS's
   - distributed (whole project available to everyone)
   - 3 layers
     - working directory (*factory*) (a bare clone does not have a working directory)
@@ -29,7 +29,7 @@
   - tree
   - commit (snapshots)
 
-### Intermediate commands
+  ### Intermediate commands
 11. git diff README (difference between working directory content and staged content)
 12. git diff --staged README OR git diff --cached README (difference between staged content and committed content)
 13. git diff HEAD README (difference between working directory and committed content)
@@ -51,13 +51,13 @@
 29. git branch -d bugfix1 (delete branch bugfix1 once you've merged it into master)
 30. git rebase experiment2 (keep your history cleaner, rewind all your work to top of master branch)
 
-### Welcome to Github
+  ### Welcome to Github
 
 31. [https://github.com/new](https://github.com/new)
-32. git remote add origin git@github.com:nameofrepo/project.git
+32. git remote add origin git@github.com:nameofrepo/project.git (git remote -v shows you the path of the remote branch)
 33. git push -u origin master
 
-### Setup your SSH on github
+  ### Setup your SSH on github
 34. Go to this page and add SSH Key [https://github.com/settings/ssh](https://github.com/settings/ssh)
 35. cd ~/.ssh (open all your existing keys)
 36. ssh-keygen -t rsa -C "myemail@gmail.com"
@@ -70,10 +70,10 @@
 43. git clone https://github.com/jashkenas/coffee-script.git
 44. git fetch (pull changes first from github and then merge if you want to, you can then git diff master origin/master to compare the changes and then git merge origin/master)
 
-### Github pages
+  ### Github pages
 45. Github pages allows you to host a static page
 
-### Advanced commands
+  ### Advanced commands
 46. git add -i (interactive add, you can add a part of a file)
 47. git stash (stash changes to the side for now)
 48. git stash list (shows you all the stashed parts of the project)
@@ -85,23 +85,23 @@
 54. git diff --name-only master experiment (differences between master and experiment branches)
 55. git push origin --delete experiment (deletes a remote branch)
 
-### Reverting to older versions
+  ### Reverting to older versions
 56. git checkout nameoffile.txt (brings back the deleted file)
 57. git reset HEAD nameoffile.txt (unstage a file that was staged)
 58. git reset --hard HEAD (reset to last commit)
 59. **git revert 35454356567e4df656344**
     - first get the git log and copy the SHA-1 Hash
 
-### Releasing your software
+    ### Releasing your software
 60. git tag -a RELEASE001 (annotated tag, add a description in the editor)
 61. git show (show contents of your tags)
 62. git show RELEASE001 (show contents of your tags)
 63. git push --tags (pushes tags to github)
 64. git checkout RELEASE001 (go back to that release)
 
-### Github workflow best practices
+  ### Github workflow best practices
 65. File an issue with the project
-66. Forking a repo
+66. Forking a repo (fork the repo, then git clone then create a branch)
 67. Create a LICENSE
 68. Recommend changes to original project (new pull request)
 70. Accept pull requests (merge pull request, similar to a code review)
@@ -110,3 +110,29 @@
 73. git describe --tags (what releases are available)
 74. [http://try.github.io](http://try.github.io) (interactive tutorial)
 75. [http://help.github.com](http://help.github.com)
+
+  ### Working in teams on Github
+81.
+82.
+83.
+84.
+
+  ### Issues
+85. Closed issues, open issues, search and labels
+86. Milestones
+87. New Issue - add in color labels
+88. Related to \#1 (will link the issue to the first issue)
+89. fixed \#2 (in the comments will automatically close the issue)
+
+
+  ### Graphs and Network
+90. Contributors, commits, Code frequency, punchcard
+
+  ### Trello
+91. Service hooks
+
+  ### Continuous integration
+92. Travis CI or Jenkins
+93. Travis bot (read access)
+
+  ### Hubot
