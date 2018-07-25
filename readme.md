@@ -1,8 +1,8 @@
-#Github in the batcave
+# Github in the batcave
 
-##Here are 100 things that you need to know about git and github:
+## Here are 100 things that you need to know about git and github:
 
-  ### Beginner commands
+### Beginner commands
 1. brew install git (install github on a mac with homebrew)
 2. git config --global user.name "M H"
 3. git config --global user.email "myemail@gmail.com"
@@ -17,7 +17,7 @@
   - .DS_Store
   - !master.txt (do track this)
 
-  ### Some theory about VCS's
+### Some theory about VCS's
   - distributed (whole project available to everyone)
   - 3 layers
     - working directory (*factory*) (a bare clone does not have a working directory)
@@ -30,7 +30,7 @@
   - commit (snapshots)
 
   ### Intermediate commands
-11. git diff README (difference between working directory content and staged content)
+11. git diff README.md (difference between working directory content and staged content)
 12. git diff --staged README OR git diff --cached README (difference between staged content and committed content)
 13. git diff HEAD README (difference between working directory and committed content)
 14. git diff 394da3 readme (what changes happened to the readme file since that hash)
@@ -92,7 +92,7 @@
 59. **git revert 35454356567e4df656344**
     - first get the git log and copy the SHA-1 Hash
 
-    ### Releasing your software
+  ### Releasing your software
 60. git tag -a RELEASE001 (annotated tag, add a description in the editor)
 61. git show (show contents of your tags)
 62. git show RELEASE001 (show contents of your tags)
