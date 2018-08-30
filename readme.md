@@ -59,12 +59,13 @@ ___
 - git branch --all (all local and remote branches)
 ![git branch --all](gitbranchall.png)
 - git push --set-upstream origin experiment (push a newly created branch)
-
-#### More advanced Git features
-- alias gl='git log --oneline --all --graph --decorate' (here is a cool alias for showing the log)
 - git merge bugfix1 (merge bugfix1 with the master branch)
 - git branch -d bugfix1 (delete branch bugfix1 once you've merged it into master)
 - git rebase experiment2 (keep your history cleaner, rewind all your work to top of master branch)
+
+#### More advanced Git features
+- alias gl='git log --oneline --all --graph --decorate' (here is a cool alias for showing the log)
+
 
 ### Github
 - [https://github.com/new](https://github.com/new)
