@@ -66,11 +66,13 @@ ___
 #### More advanced Git features
 - alias gl='git log --oneline --all --graph --decorate' (here is a cool alias for showing the log)
 
-
 ### Github
 - [https://github.com/new](https://github.com/new)
 - git remote add origin git@github.com:nameofrepo/project.git (git remote -v shows you the path of the remote branch)
 - git push -u origin master
+- git pull (get all the files from github - same as performing git fetch and then git merge)
+- git clone https://github.com/jashkenas/coffee-script.git
+- git fetch (pull changes first from github and then merge if you want to, you can then git diff master origin/master to compare the changes and then git merge origin/master)
 
 #### Setup your SSH on github
 - Go to this page and add SSH Key [https://github.com/settings/ssh](https://github.com/settings/ssh)
@@ -79,17 +81,13 @@ ___
 - cat id_rsa.pub
 - (copy the contents of this and paste it into the https://github.com/settings/ssh section)
 - ssh -T git@github.com (check that there is a SSH connection)
-- git branch -a (look at all your master branches)
-- (merge pull request)
-- git pull (get all the files from github - same as performing git fetch and then git merge)
-- git clone https://github.com/jashkenas/coffee-script.git
-- git fetch (pull changes first from github and then merge if you want to, you can then git diff master origin/master to compare the changes and then git merge origin/master)
 
 #### Github pages
 -  Github pages allows you to host a static page
 
-> Github pages are really valuable places for staginf or testing websites before publication.
+> Github pages are really valuable places for staging or testing websites before publication.
 ___
+
 ### Advanced commands
 - git add -i (interactive add, you can add a part of a file)
 - git stash (stash changes to the side for now)
@@ -102,21 +100,21 @@ ___
 - git diff --name-only master experiment (differences between master and experiment branches)
 - git push origin --delete experiment (deletes a remote branch)
 
-  ### Reverting to older versions
+### Reverting to older versions
 - git checkout nameoffile.txt (brings back the deleted file)
 - git reset HEAD nameoffile.txt (unstage a file that was staged)
 - git reset --hard HEAD (reset to last commit)
 - **git revert 35454356567e4df656344**
     - first get the git log and copy the SHA-1 Hash
 
-  ### Releasing your software
+### Releasing your software
 - git tag -a RELEASE001 (annotated tag, add a description in the editor)
 - git show (show contents of your tags)
 - git show RELEASE001 (show contents of your tags)
 - git push --tags (pushes tags to github)
 - git checkout RELEASE001 (go back to that release)
--
-  ### Github workflow best practices
+
+### Github workflow best practices
 - File an issue with the project
 - Forking a repo (fork the repo, then git clone then create a branch)
 - Create a LICENSE
@@ -128,25 +126,19 @@ ___
 - [http://try.github.io](http://try.github.io) (interactive tutorial)
 - [http://help.github.com](http://help.github.com)
 
-  ### Working in teams on Github
-
-
-  ### Issues
+### Issues
 - Closed issues, open issues, search and labels
 - Milestones
 - New Issue - add in color labels
 - Related to \#1 (will link the issue to the first issue)
 - fixed \#2 (in the comments will automatically close the issue)
 
-
-  ### Graphs and Network
+### Graphs and Network
 - Contributors, commits, Code frequency, punchcard
 
-  ### Trello
+### Trello
 -  Service hooks
 
-  ### Continuous integration
+### Continuous integration
 -  Travis CI or Jenkins
 -  Travis bot (read access)
-
-  ### Hubot
