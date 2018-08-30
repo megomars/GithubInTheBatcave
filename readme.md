@@ -18,6 +18,7 @@
   - !master.txt (do track this)
   - Icon (then press ctrl + v, enter, ctrl + v, enter, [Should look like this Icon^M^M])
   - Add to your gitignore global config file in ~/.gitignore_global.
+___
 
 ### Some theory about VCS's
 - Being distributed means that the whole project is available to everyone.
@@ -30,51 +31,61 @@
 - A tree (hierarchy between files in a Git repository)
 - A commit (snapshots of the project in time)
 
+___
 ### Intermediate commands
+
+#### Git diff
 - git diff README.md (difference between working directory content and staged content)
 - git diff --staged README OR git diff --cached README (difference between staged content and committed content)
 - git diff HEAD README (difference between working directory and committed content)
 - git diff 394da3 readme (what changes happened to the readme file since that hash)
 - git diff 434532 4345346 (compare the two hashes)
+
+#### Git log
 - git log (view the history of all your commits) (press j and k to jump up and down)
 - git log --stat (some statistics)
 - git log --oneline (useful for comparing commits)
 - git log --graph (see a graph of the project)
 - git log --pretty --graph --oneline --all --decorate (custom reports) (all branches) [http://git-scm.com/docs/git-log](http://git-scm.com/docs/git-log)
 - gitk (gives you a UI for commits)
+
+#### Git branch and Git checkout
 - git branch (which branch are we currently on?)
 - git branch experiment (make a branch called experiment)
 - git checkout experiment (switch to this branch)
 - git checkout -b "bugfix1" (make a new branch and check it out)
 - git branch --all (all local and remote branches)
+
+#### More advanced Git features
 - alias gl='git log --oneline --all --graph --decorate' (here is a cool alias for showing the log)
 - git merge bugfix1 (merge bugfix1 with the master branch)
 - git branch -d bugfix1 (delete branch bugfix1 once you've merged it into master)
 - git rebase experiment2 (keep your history cleaner, rewind all your work to top of master branch)
 
 ### Github
+- [https://github.com/new](https://github.com/new)
+- git remote add origin git@github.com:nameofrepo/project.git (git remote -v shows you the path of the remote branch)
+- git push -u origin master
 
-31. [https://github.com/new](https://github.com/new)
-32. git remote add origin git@github.com:nameofrepo/project.git (git remote -v shows you the path of the remote branch)
-33. git push -u origin master
+#### Setup your SSH on github
+- Go to this page and add SSH Key [https://github.com/settings/ssh](https://github.com/settings/ssh)
+- cd ~/.ssh (open all your existing keys)
+- ssh-keygen -t rsa -C "myemail@gmail.com"
+- cat id_rsa.pub
+- (copy the contents of this and paste it into the https://github.com/settings/ssh section)
+- ssh -T git@github.com (check that there is a SSH connection)
+- git branch -a (look at all your master branches)
+- (merge pull request)
+- git pull (get all the files from github - same as performing git fetch and then git merge)
+- git clone https://github.com/jashkenas/coffee-script.git
+- git fetch (pull changes first from github and then merge if you want to, you can then git diff master origin/master to compare the changes and then git merge origin/master)
 
-  ### Setup your SSH on github
-34. Go to this page and add SSH Key [https://github.com/settings/ssh](https://github.com/settings/ssh)
-35. cd ~/.ssh (open all your existing keys)
-36. ssh-keygen -t rsa -C "myemail@gmail.com"
-37. cat id_rsa.pub
-38. (copy the contents of this and paste it into the https://github.com/settings/ssh section)
-39. ssh -T git@github.com (check that there is a SSH connection)
-40. git branch -a (look at all your master branches)
-41. (merge pull request)
-42. git pull (get all the files from github - same as performing git fetch and then git merge)
-43. git clone https://github.com/jashkenas/coffee-script.git
-44. git fetch (pull changes first from github and then merge if you want to, you can then git diff master origin/master to compare the changes and then git merge origin/master)
-
-  ### Github pages
+#### Github pages
 -  Github pages allows you to host a static page
 
-  ### Advanced commands
+> Github pages are really valuable places for staginf or testing websites before publication.
+___
+### Advanced commands
 - git add -i (interactive add, you can add a part of a file)
 - git stash (stash changes to the side for now)
 - git stash list (shows you all the stashed parts of the project)
