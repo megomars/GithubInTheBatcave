@@ -16,6 +16,10 @@
   - Icon?
   - .DS_Store
   - !master.txt (do track this)
+  - Icon (then press ctrl + v, enter, ctrl + v, enter, [Should look like this Icon^M^M])
+  - Add to your gitignore global config file in ~/.gitignore_global.
+
+
 
 ### Some theory about VCS's
   - distributed (whole project available to everyone)
