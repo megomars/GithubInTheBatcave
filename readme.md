@@ -57,6 +57,7 @@ ___
 - git checkout experiment (switch to this branch)
 - git checkout -b "bugfix1" (make a new branch and check it out)
 - git branch --all (all local and remote branches)
+![git branch --all](gitbranchall.png)
 
 #### More advanced Git features
 - alias gl='git log --oneline --all --graph --decorate' (here is a cool alias for showing the log)
