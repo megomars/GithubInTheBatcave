@@ -43,12 +43,13 @@ ___
 - git diff 434532 4345346 (compare the two hashes)
 
 #### Git log
-- git log (view the history of all your commits) (press j and k to jump up and down)
+- git log (view the history of all your commits starting with the most recent commit) (press j and k or the up and down arrow keys to jump up and down. Press "q" to quit)
 - git log --stat (some statistics)
-- git log --oneline (useful for comparing commits)
+- **git log --oneline** (useful for comparing commits)
+![git log --oneline](gitlog.png)
 - git log --graph (see a graph of the project)
 - git log --pretty --graph --oneline --all --decorate (custom reports) (all branches) [http://git-scm.com/docs/git-log](http://git-scm.com/docs/git-log)
-- gitk (gives you a UI for commits)
+- gitk (gives you a UI for commits) (ctrl + c to cancel this gitk screen)
 
 #### Git branch and Git checkout
 - git branch (which branch are we currently on?)
