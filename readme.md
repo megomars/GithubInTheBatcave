@@ -35,6 +35,7 @@ ___
 ### Intermediate commands
 
 #### Git diff
+![git diff](gitdiff.png)
 - git diff README.md (difference between working directory content and staged content)
 - git diff --staged README OR git diff --cached README (difference between staged content and committed content)
 - git diff HEAD README (difference between working directory and committed content)
