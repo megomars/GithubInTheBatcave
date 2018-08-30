@@ -3,23 +3,21 @@
 ## Here are 100 things that you need to know about git and github:
 
 ### Beginner commands
-1. brew install git (install github on a mac with homebrew)
-2. git config --global user.name "M H"
-3. git config --global user.email "myemail@gmail.com"
-4. git config --global color.ui true
-5. **git init**
-6. **git status** (Which files are staged and which need to be staged?)
-7. **git add .** (add all changes to staging)
-8. **git commit -m "Message here"** (commit staged changes)
-9. git commit -am "message here" (add and commit changes)
-10. vim .gitignore (creates a file for ignoring certain files)
+- brew install git (install github on a mac with homebrew)
+- git config --global user.name "M H"
+- git config --global user.email "myemail@gmail.com"
+- git config --global color.ui true
+- **git init**
+- **git status** (Which files are staged and which need to be staged?)
+- **git add .** (add all changes to staging)
+- **git commit -m "Message here"** (commit staged changes)
+- git commit -am "message here" (add and commit changes)
+- vim .gitignore (creates a file for ignoring certain files)
   - Icon?
   - .DS_Store
   - !master.txt (do track this)
   - Icon (then press ctrl + v, enter, ctrl + v, enter, [Should look like this Icon^M^M])
   - Add to your gitignore global config file in ~/.gitignore_global.
-
-
 
 ### Some theory about VCS's
   - distributed (whole project available to everyone)
